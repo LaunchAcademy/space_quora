@@ -1,0 +1,7 @@
+<h1>Most Recent Questions</h1>
+
+<ol>
+  <% @questions.each do |question| %>
+    <li><%= question["content"] %></li>
+  <% end %>
+</ol>
