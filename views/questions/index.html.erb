@@ -1,5 +1,12 @@
 <h1>Most Recent Questions</h1>
 
+<form action="/questions" method="post">
+  <label for="content">Question:</label>
+  <input type="text" id="content" name="content" />
+
+  <input type="submit" value="Submit" />
+</form>
+
 <ol>
   <% @questions.each do |question| %>
     <li><%= question["content"] %></li>
