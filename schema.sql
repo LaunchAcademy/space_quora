@@ -1,0 +1,5 @@
+CREATE TABLE questions (
+  id SERIAL PRIMARY KEY,
+  content VARCHAR(1000) NOT NULL,
+  created_at TIMESTAMP NOT NULL
+);

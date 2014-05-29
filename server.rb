@@ -1,9 +1,12 @@
 require 'sinatra'
+require 'pg'
 
 def find_questions
-  [
-    { "content" => "What is the meaning of life?" }
-  ]
+  connection = PG.connect(dbname: 'space_quora')
+  results = connection.exec('SELECT * FROM questions')
+  connection.close
+
+  results
 end
 
 get '/questions' do
