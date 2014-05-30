@@ -3,3 +3,8 @@ CREATE TABLE questions (
   content VARCHAR(1000) NOT NULL,
   created_at TIMESTAMP NOT NULL
 );
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(1000) NOT NULL,
+  password VARCHAR(1000) NOT NULL
+);
